@@ -47,3 +47,4 @@ gem 'unicorn'
 
 gem 'foreman'
 gem 'rails_12factor', :group => :production
+gem 'heroku-deflater', :group => :production
