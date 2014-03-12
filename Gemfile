@@ -58,4 +58,5 @@ gem 'haml-rails'
 gem 'responders'
 gem 'has_scope'
 gem 'simple_form'
-
+gem 'kaminari'
+gem 'kaminari-bootstrap'

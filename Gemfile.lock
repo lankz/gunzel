@@ -88,6 +88,12 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    kaminari (0.15.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+    kaminari-bootstrap (3.0.1)
+      kaminari (>= 0.13.0)
+      rails
     kgio (2.9.2)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -197,6 +203,8 @@ DEPENDENCIES
   heroku-deflater
   jbuilder (~> 1.2)
   jquery-rails
+  kaminari
+  kaminari-bootstrap
   pg
   rails (= 4.0.3)
   rails_12factor
