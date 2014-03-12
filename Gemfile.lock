@@ -76,6 +76,7 @@ GEM
       activesupport (>= 4.0.1)
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
+    has_scope (0.5.1)
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
@@ -125,6 +126,8 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    responders (1.0.0)
+      railties (>= 3.2, < 5)
     rspec-core (2.14.8)
     rspec-expectations (2.14.5)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -187,12 +190,14 @@ DEPENDENCIES
   factory_girl_rails
   foreman
   haml-rails
+  has_scope
   heroku-deflater
   jbuilder (~> 1.2)
   jquery-rails
   pg
   rails (= 4.0.3)
   rails_12factor
+  responders
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc

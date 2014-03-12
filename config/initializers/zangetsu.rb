@@ -12,4 +12,6 @@ Zangetsu::Application.config.generators do |g|
     :request_specs => false,
     :routing_specs => false,
     :view_specs => false
+
+  g.scaffold_controller = 'scaffold_controller'
 end
