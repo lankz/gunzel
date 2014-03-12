@@ -5,6 +5,8 @@ Zangetsu::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+  root 'statics#home'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
