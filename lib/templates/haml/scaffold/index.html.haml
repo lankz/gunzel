@@ -1,4 +1,8 @@
 .container
+  %ol.breadcrumb
+    %li= link_to 'Home', root_path
+    %li.active= <%= class_name %>.model_name.human.pluralize
+
   .page-header.clearfix
     %h1.pull-left= <%= class_name %>.model_name.human.pluralize
     .pull-right{ :style => 'margin-top: 20px' }

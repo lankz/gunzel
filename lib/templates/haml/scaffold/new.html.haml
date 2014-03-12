@@ -1,4 +1,9 @@
 .container
+  %ol.breadcrumb
+    %li= link_to 'Home', root_path
+    %li= link_to <%= class_name %>.model_name.human.pluralize, <%= index_helper %>_path
+    %li.active New
+
   .page-header
     %h1= "New #{<%= class_name %>.model_name.human}"
 
