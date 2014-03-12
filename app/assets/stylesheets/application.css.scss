@@ -13,3 +13,5 @@
  */
 
 @import "bootstrap";
+
+body { padding-top: $navbar-height + $grid-gutter-width; }

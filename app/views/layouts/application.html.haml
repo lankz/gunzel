@@ -6,4 +6,19 @@
     = javascript_include_tag 'application', :'data-turbolinks-track' => true
     = csrf_meta_tag
   %body
+    %navbar.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %button.navbar-toggle{ :type => 'button', :data => { :toggle => 'collapse', :target => '#bs-example-navbar-collapse-1' }}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+
+          = link_to 'Zangetsu', root_path, :class => 'navbar-brand'
+
+        .collapse.navbar-collapse{ :id => '#bs-example-navbar-collapse-1' }
+          %ul.nav.navbar-nav
+            / primary navigation
+
     = yield
