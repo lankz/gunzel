@@ -1,0 +1,15 @@
+.container
+  .page-header.clearfix
+    %h1.pull-left= <%= class_name %>.model_name.human
+    .pull-right{ :style => 'margin-top: 20px' }
+      = link_to edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class => 'btn btn-default pull-right' do
+        %i.glyphicon.glyphicon-edit
+        = "Edit #{<%= class_name %>.model_name.human}"
+
+  %p#notice= notice
+
+  <%- for attribute in attributes -%>
+  %dl.dl-horizontal
+    %dt= <%= class_name %>.human_attribute_name(:<%= attribute.name %>)
+    %dd= @<%= singular_table_name %>.<%= attribute.name %>
+  <%- end -%>

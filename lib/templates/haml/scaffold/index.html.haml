@@ -1,0 +1,27 @@
+.container
+  .page-header.clearfix
+    %h1.pull-left= <%= class_name %>.model_name.human.pluralize
+    .pull-right{ :style => 'margin-top: 20px' }
+      = link_to new_<%= singular_table_name %>_path, :class => 'btn btn-success pull-right' do
+        %i.glyphicon.glyphicon-plus-sign
+        = "New #{<%= class_name %>.model_name.human}"
+
+  %table.table.table-hover.table-striped
+    %thead
+      %tr
+    <%- for attribute in attributes -%>
+        %th= <%= class_name%>.human_attribute_name(:<%= attribute.name %>)
+    <%- end -%>
+        %th
+        %th
+        %th
+
+    %tbody
+      - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
+        %tr
+    <%- for attribute in attributes -%>
+          %td= <%= singular_table_name %>.<%= attribute.name %>
+    <%- end -%>
+          %td= link_to 'Show', <%= singular_table_name %>
+          %td= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>)
+          %td= link_to 'Destroy', <%= singular_table_name %>, :method => :delete, :data => { :confirm => 'Are you sure?' }
