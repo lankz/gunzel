@@ -54,3 +54,4 @@ gem 'shoulda-matchers', :group => :test
 gem 'cucumber-rails', :group => :test, :require => false
 gem 'database_cleaner', :group => :test
 gem 'bootstrap-sass'
+gem 'haml-rails'
