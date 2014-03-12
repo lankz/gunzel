@@ -57,4 +57,5 @@ gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'responders'
 gem 'has_scope'
+gem 'simple_form'
 
