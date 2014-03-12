@@ -48,3 +48,6 @@ gem 'unicorn'
 gem 'foreman'
 gem 'rails_12factor', :group => :production
 gem 'heroku-deflater', :group => :production
+gem 'rspec-rails', :group => [ :development, :test ]
+gem 'factory_girl_rails', :group => :test
+gem 'shoulda-matchers', :group => :test
