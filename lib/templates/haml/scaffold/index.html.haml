@@ -1,8 +1,9 @@
-.container
+- content_for :breadcrumbs do
   %ol.breadcrumb
     %li= link_to 'Home', root_path
     %li.active= <%= class_name %>.model_name.human.pluralize
 
+.container
   .page-header.clearfix
     %h1.pull-left= <%= class_name %>.model_name.human.pluralize
     .pull-right{ :style => 'margin-top: 20px' }
