@@ -6,3 +6,9 @@
 <%- end -%>
 
   = f.button :submit, :class => 'btn btn-primary'
+
+  - if @<%= singular_table_name %>.persisted?
+    = link_to 'Cancel', @<%= singular_table_name %>, :class => 'btn btn-default'
+  - else
+    = link_to 'Cancel', <%= index_helper %>_path, :class => 'btn btn-default'
+
