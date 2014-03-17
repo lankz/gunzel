@@ -1,0 +1,37 @@
+# pinched from https://github.com/seyhunak/twitter-bootstrap-rails
+
+module BootstrapFlashHelper
+  # extends ....................................................................
+  # includes ...................................................................
+  # constants ..................................................................
+
+  ALERT_TYPES = [:error, :info, :success, :warning] unless const_defined?(:ALERT_TYPES)
+
+  # additional config ..........................................................
+  # class methods ..............................................................
+  # helper methods .............................................................
+
+  def bootstrap_flash
+    flash_messages = []
+    flash.each do |type, message|
+      # Skip empty messages, e.g. for devise messages set to nothing in a locale file.
+      next if message.blank?
+
+      type = type.to_sym
+      type = :success if type == :notice
+      type = :error   if type == :alert
+      next unless ALERT_TYPES.include?(type)
+
+      Array(message).each do |msg|
+        text = content_tag(:div,
+                           content_tag(:button, raw("&times;"), :class => "close", "data-dismiss" => "alert") +
+                           msg.html_safe, :class => "alert fade in alert-#{type}")
+        flash_messages << text if msg
+      end
+    end
+    flash_messages.join("\n").html_safe
+  end
+
+  # protected instance methods .................................................
+  # private instance methods ...................................................
+end
