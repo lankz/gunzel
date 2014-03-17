@@ -14,8 +14,8 @@
 
   %p#notice= notice
 
-  <%- for attribute in attributes -%>
   %dl.dl-horizontal
+  <%- for attribute in attributes -%>
     %dt= <%= class_name %>.human_attribute_name(:<%= attribute.name %>)
     %dd= @<%= singular_table_name %>.<%= attribute.name %>
   <%- end -%>
