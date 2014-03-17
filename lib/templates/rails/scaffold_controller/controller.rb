@@ -21,23 +21,19 @@ class <%= controller_class_name %>Controller < ApplicationController
   # controller actions .........................................................
 
   def index
-    @<%= plural_table_name %> ||= apply_scopes(<%= orm_class.all(class_name) %>)
-    respond_with(@<%= plural_table_name %>)
+    respond_with(@<%= plural_table_name %> ||= apply_scopes(<%= orm_class.all(class_name) %>))
   end
 
   def show
-    @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>
-    respond_with(@<%= singular_table_name %>)
+    respond_with(@<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
   end
 
   def new
-    @<%= singular_table_name %> ||= <%= orm_class.build(class_name) %>
-    respond_with(@<%= singular_table_name %>)
+    respond_with(@<%= singular_table_name %> ||= <%= orm_class.build(class_name) %>)
   end
 
   def edit
-    @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>
-    respond_with(@<%= singular_table_name %>)
+    respond_with(@<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
   end
 
   def create
