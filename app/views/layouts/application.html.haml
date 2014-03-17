@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Zangetsu
+    = display_meta_tags :site => 'Zangetsu', :reverse => true, :separator => '-'
     = stylesheet_link_tag 'application', :media => 'all', :'data-turbolinks-track' => true
     = javascript_include_tag 'application', :'data-turbolinks-track' => true
     = csrf_meta_tag
