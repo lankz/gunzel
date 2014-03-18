@@ -5,6 +5,7 @@ Zangetsu::Application.config.generators do |g|
   g.javascripts false
   g.stylesheets false
   g.helper false
+  g.jbuilder false
 
   # don't go overboard with generated specs either
   g.test_framework :rspec,
