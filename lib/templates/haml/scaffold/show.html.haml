@@ -12,8 +12,6 @@
         %i.glyphicon.glyphicon-edit
         = "Edit #{<%= class_name %>.model_name.human}"
 
-  %p#notice= notice
-
   %dl.dl-horizontal
   <%- for attribute in attributes -%>
     %dt= <%= class_name %>.human_attribute_name(:<%= attribute.name %>)
