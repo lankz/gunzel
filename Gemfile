@@ -1,4 +1,4 @@
-ruby '2.0.0'
+ruby '2.1.1'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -68,3 +68,4 @@ gem 'paper_trail'
 gem 'state_machine'
 gem 'meta-tags', :require => 'meta_tags'
 gem 'awesome_nested_set'
+gem 'thread_safe', '~> 0.2.0'
