@@ -220,30 +220,30 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  acts-as-taggable-on
-  acts_as_list
+  acts-as-taggable-on (~> 3.0.0)
+  acts_as_list (~> 0.4.0)
   awesome_nested_set
-  bootstrap-sass
+  bootstrap-sass (~> 3.1.1)
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner
   factory_girl_rails
   foreman
-  friendly_id
+  friendly_id (~> 5.0.0)
   haml-rails
-  has_scope
+  has_scope (~> 0.5.0)
   heroku-deflater
   jbuilder (~> 1.2)
   jquery-rails
-  kaminari
+  kaminari (~> 0.15.0)
   kaminari-bootstrap
-  meta-tags
-  paper_trail
-  paranoia
+  meta-tags (~> 1.5.0)
+  paper_trail (~> 3.0.0)
+  paranoia (~> 2.0.0)
   pg
   rails (= 4.1.0)
   rails_12factor
-  responders
+  responders (~> 1.0.0)
   rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
