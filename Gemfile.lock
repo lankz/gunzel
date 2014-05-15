@@ -185,6 +185,8 @@ GEM
       rdoc (~> 4.0, < 5.0)
     shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
+    sitemap_generator (5.0.3)
+      builder
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -249,6 +251,7 @@ DEPENDENCIES
   sdoc
   shoulda-matchers
   simple_form!
+  sitemap_generator (~> 5.0.3)
   state_machine
   thread_safe (~> 0.2.0)
   turbolinks
