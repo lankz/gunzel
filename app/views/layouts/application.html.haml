@@ -21,6 +21,18 @@
           %ul.nav.navbar-nav
             / primary navigation
 
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li
+                = link_to destroy_user_session_path, :method => :delete do
+                  %i.glyphicon.glyphicon-log-out
+                  Sign out
+            - else
+              %li
+                = link_to new_user_session_path do
+                  %i.glyphicon.glyphicon-log-in
+                  Sign in
+
     .container
       = yield :breadcrumbs
       = bootstrap_flash
