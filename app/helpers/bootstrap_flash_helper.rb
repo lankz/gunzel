@@ -5,7 +5,7 @@ module BootstrapFlashHelper
   # includes ...................................................................
   # constants ..................................................................
 
-  ALERT_TYPES = [:error, :info, :success, :warning] unless const_defined?(:ALERT_TYPES)
+  ALERT_TYPES = [ :success, :info, :warning, :danger ] unless const_defined?(:ALERT_TYPES)
 
   # additional config ..........................................................
   # class methods ..............................................................
@@ -19,7 +19,7 @@ module BootstrapFlashHelper
 
       type = type.to_sym
       type = :success if type == :notice
-      type = :error   if type == :alert
+      type = :danger  if type == :alert
       next unless ALERT_TYPES.include?(type)
 
       Array(message).each do |msg|
@@ -29,6 +29,7 @@ module BootstrapFlashHelper
         flash_messages << text if msg
       end
     end
+
     flash_messages.join("\n").html_safe
   end
 
