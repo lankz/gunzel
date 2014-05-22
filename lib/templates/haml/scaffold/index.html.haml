@@ -8,7 +8,7 @@
     %h1.pull-left= <%= class_name %>.model_name.human.pluralize
     .pull-right{ :style => 'margin-top: 20px' }
       = link_to new_<%= singular_table_name %>_path, :class => 'btn btn-success pull-right' do
-        %i.glyphicon.glyphicon-plus-sign
+        = fa_icon 'plus-circle'
         = "New #{<%= class_name %>.model_name.human}"
 
   %table.table.table-hover.table-striped

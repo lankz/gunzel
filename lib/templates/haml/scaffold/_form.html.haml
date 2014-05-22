@@ -17,5 +17,5 @@
         :class => 'btn btn-danger pull-right',
         :method => :delete,
         :data => { :confirm => 'Are you sure?' } do
-      %i.glyphicon.glyphicon-trash
+      = fa_icon 'trash-o'
       = "Destroy #{<%= class_name %>.model_name.human}"

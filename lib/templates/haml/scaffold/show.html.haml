@@ -9,7 +9,7 @@
     %h1.pull-left= <%= class_name %>.model_name.human
     .pull-right{ :style => 'margin-top: 20px' }
       = link_to edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class => 'btn btn-default pull-right' do
-        %i.glyphicon.glyphicon-edit
+        = fa_icon 'edit'
         = "Edit #{<%= class_name %>.model_name.human}"
 
   %dl.dl-horizontal
