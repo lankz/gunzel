@@ -23,10 +23,21 @@
 
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
-              %li
-                = link_to destroy_user_session_path, :method => :delete do
-                  = fa_icon 'sign-in'
-                  Sign out
+              %li.dropdown
+                %a.dropdown-toggle{ :href => '#', :data => { :toggle => 'dropdown' }}
+                  = gravatar_image_tag(current_user.email,
+                      :alt => current_user.username,
+                      :class => 'avatar',
+                      :gravatar => { :filetype => 'png',
+                                     :size => 32 })
+                  = truncate current_user.username
+                  %b.caret
+
+                %ul.dropdown-menu
+                  %li
+                    = link_to destroy_user_session_path, :method => :delete do
+                      = fa_icon 'sign-in'
+                      Sign out
             - else
               %li
                 = link_to new_user_session_path do
