@@ -3,7 +3,7 @@
     %h2 Sign in
 
   = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :wrapper => :horizontal_form, :wrapper_mappings => { :boolean => :horizontal_boolean }, :html => { :class => 'form-horizontal', :role => 'form' }) do |f|
-    = f.input :email, :required => false, :autofocus => true
+    = f.input :login, :required => false, :autofocus => :true
     = f.input :password, :required => false
     = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
 
