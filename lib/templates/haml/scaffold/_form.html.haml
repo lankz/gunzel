@@ -12,7 +12,7 @@
   - else
     = link_to 'Cancel', <%= index_helper %>_path, :class => 'btn btn-default'
 
-  - if @<%= singular_table_name %>.persisted?
+  - if can?(:destroy, @<%= singular_table_name %>) && @<%= singular_table_name %>.persisted?
     = link_to @<%= singular_table_name %>,
         :class => 'btn btn-danger pull-right',
         :method => :delete,

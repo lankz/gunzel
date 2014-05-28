@@ -9,6 +9,8 @@ class StaticsController < ApplicationController
 
   respond_to :html
 
+  skip_authorization_check
+
   # controller actions .........................................................
 
   def home
