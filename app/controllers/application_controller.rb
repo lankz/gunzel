@@ -13,9 +13,21 @@ class ApplicationController < ActionController::Base
 
   check_authorization :unless => :devise_controller?
 
-  rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
-  end
+  rescue_from CanCan::AccessDenied, :with => :forbidden
+  rescue_from ActiveRecord::RecordNotFound, :with => :not_found
 
   # controller actions .........................................................
+  # protected instance methods .................................................
+
+  protected
+
+  def forbidden
+    set_meta_tags :title => 'Forbidden'
+    render :forbidden, :status => :forbidden
+  end
+
+  def not_found
+    set_meta_tags :title => 'Not found'
+    render :not_found, :status => :not_found
+  end
 end
