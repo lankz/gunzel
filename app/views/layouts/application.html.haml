@@ -35,6 +35,11 @@
 
                 %ul.dropdown-menu
                   %li
+                    = link_to edit_registration_path(current_user) do
+                      = fa_icon 'user'
+                      = "Edit #{User.model_name.human}"
+                  %li.divider
+                  %li
                     = link_to destroy_user_session_path, :method => :delete do
                       = fa_icon 'sign-in'
                       Sign out
