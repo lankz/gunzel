@@ -17,17 +17,36 @@ Zangetsu::Application.config.generators do |g|
   g.scaffold_controller = 'scaffold_controller'
 end
 
-require "devise_controller"
+module Zangetsu
+  module Devise
+    module PermittedParameters
+      # extends ................................................................
 
-class DeviseController
-  before_filter :configure_permitted_parameters
-  hide_action :configure_permitted_parameters
+      extend ActiveSupport::Concern
 
-  protected
+      # includes ...............................................................
+      # constants ..............................................................
+      # additional config ......................................................
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :remember_me) }
-    devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password, :remember_me) }
-    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :email, :password, :password_confirmation, :current_password) }
+      included do
+        before_filter :configure_permitted_parameters
+      end
+
+      # class methods ..........................................................
+      # helper methods .........................................................
+      # protected instance methods .............................................
+
+      protected
+
+      def configure_permitted_parameters
+        devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :remember_me) }
+        devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password, :remember_me) }
+        devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:username, :email, :password, :password_confirmation, :current_password) }
+      end
+
+      # private instance methods ...............................................
+    end
   end
 end
+
+DeviseController.send :include, Zangetsu::Devise::PermittedParameters
