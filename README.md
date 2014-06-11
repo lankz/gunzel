@@ -46,7 +46,7 @@ For security reasons it's a good idea to generate a new `secret_key_base`:
 
 ```bash
 ./bin/rake secret | pbcopy
-vim config/initializers/secret_token.rb
+vim config/secrets.yml
 ```
 
 There are loads of other configuration options for Zangetsu and it's dependencies - you'll want to check out the files in `config/initializers`.
