@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 01ccfcebd45b8de0a6846d0f33b9daf74673dcc1
+  revision: 5364fdc0f2bcbac2812781dd1aa1a1835d09f9a2
   branch: master
   specs:
-    simple_form (3.1.0.rc1)
+    simple_form (3.1.0.rc2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
 
@@ -49,7 +49,7 @@ GEM
       sass (~> 3.2)
     builder (3.2.2)
     cancancan (1.8.4)
-    capybara (2.3.0)
+    capybara (2.4.1)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
