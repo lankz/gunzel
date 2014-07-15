@@ -178,11 +178,16 @@ GEM
     responders (1.1.0)
       railties (>= 3.2, < 5)
     rolify (3.4.0)
+    rspec-collection_matchers (1.0.0)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-core (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.2)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.0.0)
+    rspec-its (1.0.1)
+      rspec-core (>= 2.99.0.beta1)
+      rspec-expectations (>= 2.99.0.beta1)
     rspec-mocks (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-rails (3.0.1)
@@ -271,6 +276,8 @@ DEPENDENCIES
   rails_12factor
   responders (~> 1.1.0)
   rolify (~> 3.4.0)
+  rspec-collection_matchers (~> 1.0.0)
+  rspec-its (~> 1.0.1)
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc

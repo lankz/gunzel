@@ -49,6 +49,8 @@ gem 'foreman'
 gem 'rails_12factor', :group => :production
 gem 'heroku-deflater', :group => :production
 gem 'rspec-rails', :group => [ :development, :test ]
+gem 'rspec-collection_matchers', '~> 1.0.0'
+gem 'rspec-its', '~> 1.0.1'
 gem 'factory_girl_rails', :group => :test
 gem 'shoulda-matchers', :group => :test
 gem 'cucumber-rails', :group => :test, :require => false
