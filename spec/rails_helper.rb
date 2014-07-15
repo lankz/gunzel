@@ -41,6 +41,6 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
-  # So we don't have to use the FactoryGirl namespace everywhere.
   config.include FactoryGirl::Syntax::Methods
+  config.include Devise::TestHelpers, :type => :controller
 end
