@@ -1,5 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Role do
+RSpec.describe Role, :type => :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end
