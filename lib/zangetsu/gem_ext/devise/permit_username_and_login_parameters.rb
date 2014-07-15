@@ -30,5 +30,6 @@ module Zangetsu
   end
 end
 
-require Rails.root.join(*%w(config initializers devise))
-DeviseController.send :include, Zangetsu::Devise::PermitUsernameAndLoginParameters
+Rails.application.config.to_prepare do
+  DeviseController.send :include, Zangetsu::Devise::PermitUsernameAndLoginParameters
+end
