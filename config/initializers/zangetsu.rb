@@ -6,7 +6,6 @@ Zangetsu::Application.config.generators do |g|
   # don't generate quite so much cruft when scaffolding
   g.javascripts false
   g.stylesheets false
-  g.helper false
   g.jbuilder false
 
   # don't go overboard with generated specs either
