@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/ifad/data-confirm-modal.git
+  revision: 81d140fe51e70771821ae0434a32dacf69ca5292
+  specs:
+    data-confirm-modal (1.0.1)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/plataformatec/simple_form.git
   revision: 5364fdc0f2bcbac2812781dd1aa1a1835d09f9a2
   branch: master
@@ -254,6 +261,7 @@ DEPENDENCIES
   cancancan (~> 1.8.0)
   coffee-rails (~> 4.0.0)
   cucumber-rails
+  data-confirm-modal!
   database_cleaner
   devise (~> 3.2.4)
   factory_girl_rails
