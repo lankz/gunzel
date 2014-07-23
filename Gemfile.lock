@@ -49,8 +49,8 @@ GEM
       activerecord (>= 3.0)
     arel (5.0.1.20140414130214)
     atomic (1.1.16)
-    awesome_nested_set (2.1.6)
-      activerecord (>= 3.0.0)
+    awesome_nested_set (3.0.0.rc.6)
+      activerecord (>= 4.0.0, < 5)
     bcrypt (3.1.7)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
@@ -256,7 +256,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 3.3.0)
   acts_as_list (~> 0.4.0)
-  awesome_nested_set
+  awesome_nested_set (~> 3.0.0.rc)
   bootstrap-sass (~> 3.2.0)
   cancancan (~> 1.8.0)
   coffee-rails (~> 4.0.0)
