@@ -53,8 +53,7 @@ gem 'rspec-collection_matchers', '~> 1.0.0'
 gem 'rspec-its', '~> 1.0.1'
 gem 'factory_girl_rails', :group => :test
 gem 'shoulda-matchers', :group => :test
-gem 'cucumber-rails', :group => :test, :require => false
-gem 'database_cleaner', :group => :test
+gem 'capybara', '~> 2.4.1'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'font-awesome-rails', '~> 4.1.0'
 gem 'haml-rails'
