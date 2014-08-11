@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: ed3de1c2b566a962697529e824953f6b280e2867
+  revision: c3bc4af79df2f3f51500a38d8a84aa682f9ad009
   branch: master
   specs:
     simple_form (3.1.0.rc2)
@@ -54,7 +54,7 @@ GEM
     bootstrap-sass (3.2.0.1)
       sass (~> 3.2)
     builder (3.2.2)
-    cancancan (1.9.1)
+    cancancan (1.9.2)
     capybara (2.4.1)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -195,9 +195,9 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    sdoc (0.4.0)
-      json (~> 1.8)
-      rdoc (~> 4.0, < 5.0)
+    sdoc (0.4.1)
+      json (~> 1.7, >= 1.7.7)
+      rdoc (~> 4.0)
     shoulda-matchers (2.6.2)
       activesupport (>= 3.0.0)
     sitemap_generator (5.0.5)
@@ -218,7 +218,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (1.2.1)
+    tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
