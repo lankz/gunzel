@@ -5,15 +5,6 @@ GIT
     data-confirm-modal (1.0.1)
       railties (>= 3.0)
 
-GIT
-  remote: git://github.com/plataformatec/simple_form.git
-  revision: c3bc4af79df2f3f51500a38d8a84aa682f9ad009
-  branch: master
-  specs:
-    simple_form (3.1.0.rc2)
-      actionpack (~> 4.0)
-      activemodel (~> 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -200,6 +191,9 @@ GEM
       rdoc (~> 4.0)
     shoulda-matchers (2.6.2)
       activesupport (>= 3.0.0)
+    simple_form (3.1.0.rc2)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
     sitemap_generator (5.0.5)
       builder
     sprockets (2.11.0)
@@ -271,7 +265,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc
   shoulda-matchers
-  simple_form!
+  simple_form (~> 3.1.0.rc2)
   sitemap_generator (~> 5.0.3)
   state_machine (~> 1.2.0)
   uglifier (>= 1.3.0)
