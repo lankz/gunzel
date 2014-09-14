@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby   '2.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.6'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -48,7 +48,7 @@ gem 'unicorn'
 gem 'foreman'
 gem 'rails_12factor', :group => :production
 gem 'heroku-deflater', :group => :production
-gem 'rspec-rails', '~> 3.0.2', :group => [ :development, :test ]
+gem 'rspec-rails', '~> 3.1.0', :group => [ :development, :test ]
 gem 'rspec-collection_matchers', '~> 1.0.0'
 gem 'rspec-its', '~> 1.0.1'
 gem 'factory_girl_rails', '~> 4.4.1', :group => :test
