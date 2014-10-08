@@ -17,9 +17,8 @@
 
 body { padding-top: $navbar-height + $grid-gutter-width; }
 
-.navbar .avatar {
-  @include border-top-radius(2px);
-  @include border-bottom-radius(2px);
+.img-avatar {
+  @extend .img-circle;
 
   margin: -7px ($grid-gutter-width * 0.25) -7px 0;
 }

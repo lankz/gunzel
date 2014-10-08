@@ -27,7 +27,7 @@
                 %a.dropdown-toggle{ :href => '#', :data => { :toggle => 'dropdown' }}
                   = gravatar_image_tag(current_user.email,
                       :alt => current_user.username,
-                      :class => 'avatar',
+                      :class => 'img-avatar',
                       :gravatar => { :filetype => 'png',
                                      :size => 32 })
                   = truncate current_user.username
