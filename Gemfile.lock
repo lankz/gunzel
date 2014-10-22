@@ -237,12 +237,12 @@ DEPENDENCIES
   devise (~> 3.4)
   factory_girl_rails (~> 4.5)
   font-awesome-rails (~> 4.2)
-  foreman
+  foreman (~> 0.75)
   friendly_id (~> 5.0)
   gravatar_image_tag (~> 1.2)
   haml-rails (~> 0.5)
   has_scope (~> 0.5)
-  heroku-deflater
+  heroku-deflater (~> 0.5)
   jbuilder (~> 2.0)
   jquery-rails
   kaminari (~> 0.16)
@@ -260,7 +260,7 @@ DEPENDENCIES
   rspec-rails (~> 3.1)
   sass-rails (~> 4.0.3)
   sdoc
-  shoulda-matchers
+  shoulda-matchers (~> 2.7)
   simple_form (~> 3.1.0.rc2)
   sitemap_generator (~> 5.0)
   state_machine (~> 1.2)
