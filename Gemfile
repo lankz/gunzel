@@ -51,7 +51,7 @@ gem 'heroku-deflater', :group => :production
 gem 'rspec-rails', '~> 3.1.0', :group => [ :development, :test ]
 gem 'rspec-collection_matchers', '~> 1.0.0'
 gem 'rspec-its', '~> 1.0.1'
-gem 'factory_girl_rails', '~> 4.4.1', :group => :test
+gem 'factory_girl_rails', '~> 4.5.0', :group => :test
 gem 'shoulda-matchers', :group => :test
 gem 'capybara', '~> 2.4.1'
 gem 'bootstrap-sass', '~> 3.2.0'
