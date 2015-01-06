@@ -8,7 +8,7 @@ An opinionated Rails starter application that has everything you need to hit the
 Goodies
 -------
 
-* Rails 4.1.6 (duh)
+* Rails 4.2
 * Custom view scaffold templates using [HAML](https://github.com/indirect/haml-rails), [Simple Form](https://github.com/plataformatec/simple_form), [Bootstrap](http://getbootstrap.com/) and [FontAwesome](http://fortawesome.github.io/Font-Awesome/)
 * Custom model and controller scaffold templates using [Responders](https://github.com/plataformatec/responders) and [Has scope](https://github.com/plataformatec/has_scope)
 * [Devise](https://github.com/plataformatec/devise), [CanCan](https://github.com/CanCanCommunity/cancancan) and [Rolify](https://github.com/EppO/rolify)
