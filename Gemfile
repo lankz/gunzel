@@ -47,6 +47,7 @@ gem 'foreman', '~> 0.75'
 gem 'rails_12factor', :group => :production
 gem 'heroku-deflater', '~> 0.5', :group => :production
 gem 'rspec-rails', '~> 3.1', :group => [ :development, :test ]
+gem 'spring-commands-rspec', :group => :development
 gem 'rspec-collection_matchers', '~> 1.0'
 gem 'rspec-its', '~> 1.0'
 gem 'factory_girl_rails', '~> 4.5', :group => :test
