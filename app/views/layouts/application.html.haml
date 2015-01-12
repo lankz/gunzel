@@ -1,56 +1,35 @@
 !!! 5
-%html
+%html{ :lang => 'en' }
   %head
+    %meta{ :charset => 'utf-8' }
+    %meta{ :'http-equiv' => 'X-UA-Compatible', :content => 'IE=edge' }
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1' }
+
     = display_meta_tags :site => 'Zangetsu', :reverse => true, :separator => '-'
-    = stylesheet_link_tag 'application', :media => 'all'
-    = javascript_include_tag 'application'
     = csrf_meta_tag
+
+    = stylesheet_link_tag 'application', :media => 'all'
+
+    / [if lt IE 9]
+      = javascript_include_tag '//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js'
+      = javascript_include_tag '//oss.maxcdn.com/respond/1.4.2/respond.min.js'
+
   %body
-    %nav.navbar.navbar-inverse.navbar-fixed-top
-      .container
-        .navbar-header
-          %button.navbar-toggle{ :type => 'button', :data => { :toggle => 'collapse', :target => '#bs-example-navbar-collapse-1' }}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
+    %header
+      = render 'navbar'
 
-          = link_to 'Zangetsu', root_path, :class => 'navbar-brand'
+      - if content_for?(:breadcrumbs)
+        .container#breadcrumbs
+          = yield :breadcrumbs
 
-        .collapse.navbar-collapse{ :id => 'bs-example-navbar-collapse-1' }
-          %ul.nav.navbar-nav
-            / primary navigation
+      - if flash.present?
+        .container#flash
+          = bootstrap_flash
 
-          %ul.nav.navbar-nav.navbar-right
-            - if user_signed_in?
-              %li.dropdown
-                %a.dropdown-toggle{ :href => '#', :data => { :toggle => 'dropdown' }}
-                  = gravatar_image_tag(current_user.email,
-                      :alt => current_user.username,
-                      :class => 'img-avatar',
-                      :gravatar => { :filetype => 'png',
-                                     :size => 32 })
-                  = truncate current_user.username
-                  %b.caret
+    %main
+      = yield
 
-                %ul.dropdown-menu
-                  %li
-                    = link_to edit_registration_path(current_user) do
-                      = fa_icon 'user'
-                      = "Edit #{User.model_name.human}"
-                  %li.divider
-                  %li
-                    = link_to destroy_user_session_path, :method => :delete do
-                      = fa_icon 'sign-in'
-                      Sign out
-            - else
-              %li
-                = link_to new_user_session_path do
-                  = fa_icon 'sign-out'
-                  Sign in
+    %footer
+      / something here
 
-    .container
-      = yield :breadcrumbs
-      = bootstrap_flash
-
-    = yield
+    = javascript_include_tag 'application'

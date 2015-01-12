@@ -1,0 +1,42 @@
+%nav.navbar.navbar-inverse.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle{ :type => 'button', :data => { :toggle => 'collapse', :target => '#bs-example-navbar-collapse-1' }}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+
+      = link_to 'Zangetsu', root_path, :class => 'navbar-brand'
+
+    .collapse.navbar-collapse{ :id => 'bs-example-navbar-collapse-1' }
+      %ul.nav.navbar-nav
+        / primary navigation
+
+      %ul.nav.navbar-nav.navbar-right
+        - if user_signed_in?
+          %li.dropdown
+            %a.dropdown-toggle{ :href => '#', :data => { :toggle => 'dropdown' }}
+              = gravatar_image_tag(current_user.email,
+                  :alt => current_user.username,
+                  :class => 'img-avatar',
+                  :gravatar => { :filetype => 'png',
+                                 :size => 32 })
+              = truncate current_user.username
+              %b.caret
+
+            %ul.dropdown-menu
+              %li
+                = link_to edit_registration_path(current_user) do
+                  = fa_icon 'user'
+                  = "Edit #{User.model_name.human}"
+              %li.divider
+              %li
+                = link_to destroy_user_session_path, :method => :delete do
+                  = fa_icon 'sign-in'
+                  Sign out
+        - else
+          %li
+            = link_to new_user_session_path do
+              = fa_icon 'sign-out'
+              Sign in
