@@ -86,6 +86,8 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
@@ -285,6 +287,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   data-confirm-modal!
   devise (~> 3.4)
+  dotenv-rails (~> 1.0)
   factory_girl_rails (~> 4.5)
   font-awesome-rails (~> 4.2)
   foreman (~> 0.75)

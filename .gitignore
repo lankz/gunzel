@@ -17,3 +17,6 @@
 
 # Ignore database configuration
 /config/database.yml
+
+# Ingore environment-based configuration
+/.env
