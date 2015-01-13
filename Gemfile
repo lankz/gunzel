@@ -75,4 +75,4 @@ gem 'rolify', '~> 3.4'
 gem 'cancancan', '~> 1.9'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'data-confirm-modal', :github => 'ifad/data-confirm-modal'
-gem 'dotenv-rails', '~> 1.0'
+gem 'dotenv-rails', '~> 1.0', :group => [ :development, :test ]
