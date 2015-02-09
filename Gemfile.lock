@@ -285,6 +285,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on (~> 3.4)
   acts_as_list (~> 0.4)
+  autoprefixer-rails (~> 5.1)
   awesome_nested_set (~> 3.0)
   bootstrap-sass (~> 3.2)
   byebug
