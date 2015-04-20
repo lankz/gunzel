@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby   '2.2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -75,5 +75,5 @@ gem 'rolify', '~> 4.0'
 gem 'cancancan', '~> 1.9'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'data-confirm-modal', :github => 'ifad/data-confirm-modal'
-gem 'dotenv-rails', '~> 1.0', :group => [ :development, :test ]
+gem 'dotenv-rails', '~> 2.0', :group => [ :development, :test ]
 gem 'autoprefixer-rails', '~> 5.1'
