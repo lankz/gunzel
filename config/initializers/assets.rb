@@ -11,6 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 Rails.application.config.assets.precompile += %w(
+  fontawesome/fonts/*
   jquery/dist/jquery.js
   modernizr/modernizr.js
   respond/dest/respond.src.js
