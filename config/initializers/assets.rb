@@ -16,3 +16,5 @@ Rails.application.config.assets.precompile += %w(
   modernizr/modernizr.js
   respond/dest/respond.src.js
 )
+
+NonStupidDigestAssets.whitelist << /fontawesome\/fonts\/[^\/]+$/
