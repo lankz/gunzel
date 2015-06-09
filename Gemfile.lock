@@ -280,7 +280,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   data-confirm-modal!
   devise (~> 3.4)
-  dotenv-rails (~> 2.0)
+  dotenv-rails
   factory_girl_rails (~> 4.5)
   foreman (~> 0.75)
   friendly_id (~> 5.0)
