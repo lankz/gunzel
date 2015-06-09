@@ -11,6 +11,9 @@ class <%= controller_class_name %>Controller < ApplicationController
 
   # before_filter :authenticate_user!
 
+  before_filter :find_<%= singular_table_name %>,
+                :except => %i(index new create)
+
   # helpers ....................................................................
   # scopes .....................................................................
 
@@ -27,57 +30,49 @@ class <%= controller_class_name %>Controller < ApplicationController
     authorize!(:index, <%= class_name %>)
 
     respond_with(@<%= plural_table_name %> ||= apply_scopes(
-      <%= orm_class.all(class_name) %>.accessible_by(current_ability)))
+      <%= class_name %>.accessible_by(current_ability)))
   end
 
   def show
-    authorize!(:show, @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
-    respond_with(@<%= singular_table_name %>)
+    respond_with(authorize!(:show, @<%= singular_table_name %>))
   end
 
   def new
-    authorize!(:new, @<%= singular_table_name %> ||= <%= orm_class.build(class_name) %>)
-    respond_with(@<%= singular_table_name %>)
+    respond_with(authorize!(:new, @<%= singular_table_name %> ||= <%= orm_class.build(class_name) %>))
   end
 
   def edit
-    authorize!(:edit, @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
-    respond_with(@<%= singular_table_name %>)
+    respond_with(authorize!(:edit, @<%= singular_table_name %>))
   end
 
   def create
     authorize!(:create, @<%= singular_table_name %> ||= <%= orm_class.build(class_name, "#{singular_table_name}_params") %>)
 
-    if @<%= orm_instance.save %>
-      respond_with(@<%= singular_table_name %>, :location => @<%= singular_table_name %>)
-    else
-      respond_with(@<%= singular_table_name %>)
-    end
+    @<%= singular_table_name %>.save
+    respond_with(@<%= singular_table_name %>, :location => @<%= singular_table_name %>)
   end
 
   def update
-    authorize!(:update, @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
+    authorize!(:update, @<%= singular_table_name %>)
 
-    if @<%= orm_instance.update("#{singular_table_name}_params") %>
-      respond_with(@<%= singular_table_name %>, :location => @<%= singular_table_name %>)
-    else
-      respond_with(@<%= singular_table_name %>)
-    end
+    @<%= orm_instance.update("#{singular_table_name}_params") %>
+    respond_with(@<%= singular_table_name %>, :location => @<%= singular_table_name %>)
   end
 
   def destroy
-    authorize!(:destroy, @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
+    authorize!(:destroy, @<%= singular_table_name %>)
 
-    if @<%= orm_instance.destroy %>
-      respond_with(@<%= singular_table_name %>, :location => <%= index_helper %>_url)
-    else
-      respond_with(@<%= singular_table_name %>)
-    end
+    @<%= orm_instance.destroy %>
+    respond_with(@<%= singular_table_name %>, :location => <%= index_helper %>_url)
   end
 
   # protected instance methods .................................................
 
   protected
+
+  def find_<%= singular_table_name %>
+    @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>
+  end
 
   def <%= "#{singular_table_name}_params" %>
     <%- if attributes_names.empty? -%>
