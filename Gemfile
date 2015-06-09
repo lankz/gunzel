@@ -53,8 +53,6 @@ gem 'rspec-its', '~> 1.0'
 gem 'factory_girl_rails', '~> 4.5', :group => :test
 gem 'shoulda-matchers', '~> 2.7', :group => :test
 gem 'capybara', '~> 2.4'
-gem 'bootstrap-sass', '~> 3.2'
-gem 'font-awesome-rails', '~> 4.2'
 gem 'haml-rails', '~> 0.5'
 gem 'responders', '~> 2.0'
 gem 'has_scope', '~> 0.5'

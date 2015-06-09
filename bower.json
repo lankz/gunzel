@@ -1,0 +1,19 @@
+{
+  "name": "Zangetsu",
+  "homepage": "https://github.com/lankz/zangetsu",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3",
+    "fontawesome": "~4.3",
+    "modernizr": "~2.8.3",
+    "respond": "~1.4.2"
+  }
+}

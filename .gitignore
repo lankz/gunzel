@@ -20,3 +20,6 @@
 
 # Ingore environment-based configuration
 /.env
+
+# Ignore installed bower components
+/vendor/assets/components

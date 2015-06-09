@@ -12,9 +12,11 @@
  *= require_tree .
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+$fa-font-path: 'fontawesome/fonts';
+@import "fontawesome/scss/font-awesome";
 
 body { padding-top: $navbar-height + $grid-gutter-width; }
 
