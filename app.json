@@ -1,0 +1,18 @@
+{
+  "name": "Zangetsu",
+  "description": "Slices through the setup time for your next Rails project",
+  "repository": "https://github.com/lankz/zangetsu.git",
+  "env": {
+    "BUILDPACK_URL": "https://github.com/ddollar/heroku-buildpack-multi.git",
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    }
+  },
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate --trace"
+  },
+  "success_url": "/",
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}

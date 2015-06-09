@@ -4,6 +4,7 @@ Zangetsu
 An opinionated Rails starter application that has everything you need to hit the ground running on your next project.
 
 [![Dependency Status](https://gemnasium.com/lankz/zangetsu.svg)](https://gemnasium.com/lankz/zangetsu)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 Goodies
 -------

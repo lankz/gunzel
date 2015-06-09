@@ -1,0 +1,13 @@
+{
+  "name": "Zangetsu",
+  "private": true,
+  "engines": {
+    "node": "~0.12.4"
+  },
+  "dependencies": {
+    "bower": "~1.4.1"
+  },
+  "scripts": {
+    "postinstall": "bower install"
+  }
+}
