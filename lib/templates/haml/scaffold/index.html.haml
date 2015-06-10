@@ -19,7 +19,7 @@
     %thead
       %tr
     <%- for attribute in attributes -%>
-        %th= <%= class_name%>.human_attribute_name(:<%= attribute.name %>)
+        %th= sort_link(@search, :<%= attribute.name %>, <%= class_name%>.human_attribute_name(:<%= attribute.name %>))
     <%- end -%>
         %th
         %th

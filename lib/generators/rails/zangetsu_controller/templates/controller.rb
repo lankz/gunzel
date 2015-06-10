@@ -11,9 +11,6 @@ class <%= controller_class_name %>Controller < ApplicationController
 
   # before_filter :authenticate_user!
 
-  before_filter :find_<%= singular_table_name %>,
-                :except => %i(index new create)
-
   # helpers ....................................................................
   # scopes .....................................................................
 
@@ -30,19 +27,23 @@ class <%= controller_class_name %>Controller < ApplicationController
     authorize!(:index, <%= class_name %>)
 
     respond_with(@<%= plural_table_name %> ||= apply_scopes(
-      <%= class_name %>.accessible_by(current_ability)))
+      search_<%= plural_table_name %>.result \
+             <%= ' ' * plural_table_name.length %>.accessible_by(current_ability)))
   end
 
   def show
-    respond_with(authorize!(:show, @<%= singular_table_name %>))
+    authorize!(:show, find_<%= singular_table_name %>)
+    respond_with(@<%= singular_table_name %>)
   end
 
   def new
-    respond_with(authorize!(:new, @<%= singular_table_name %> ||= <%= orm_class.build(class_name) %>))
+    authorize!(:new, @<%= singular_table_name %> ||= <%= orm_class.build(class_name) %>)
+    respond_with(@<%= singular_table_name %>)
   end
 
   def edit
-    respond_with(authorize!(:edit, @<%= singular_table_name %>))
+    authorize!(:edit, find_<%= singular_table_name %>)
+    respond_with(@<%= singular_table_name %>)
   end
 
   def create
@@ -53,14 +54,14 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def update
-    authorize!(:update, @<%= singular_table_name %>)
+    authorize!(:update, find_<%= singular_table_name %>)
 
     @<%= orm_instance.update("#{singular_table_name}_params") %>
     respond_with(@<%= singular_table_name %>, :location => @<%= singular_table_name %>)
   end
 
   def destroy
-    authorize!(:destroy, @<%= singular_table_name %>)
+    authorize!(:destroy, find_<%= singular_table_name %>)
 
     @<%= orm_instance.destroy %>
     respond_with(@<%= singular_table_name %>, :location => <%= index_helper %>_url)
@@ -72,6 +73,10 @@ class <%= controller_class_name %>Controller < ApplicationController
 
   def find_<%= singular_table_name %>
     @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>
+  end
+
+  def search_<%= plural_table_name %>
+    @search ||= <%= class_name %>.ransack(params[:q])
   end
 
   def <%= "#{singular_table_name}_params" %>
