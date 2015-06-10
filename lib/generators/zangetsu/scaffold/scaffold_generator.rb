@@ -6,6 +6,10 @@ module Zangetsu
       def self.source_root
         File.expand_path("../templates", __FILE__)
       end
+
+      def available_views
+        %w(index edit show new _table)
+      end
     end
   end
 end
