@@ -1,5 +1,5 @@
-- set_meta_tags :title => <%= class_name %>.model_name.human,
-                :canonical => <%= singular_table_name %>_url(@<%= singular_table_name %>)
+- set_meta_tags(:title => <%= class_name %>.model_name.human,
+                :canonical => <%= singular_table_name %>_url(@<%= singular_table_name %>))
 
 - content_for(:breadcrumbs) do
   %ol.breadcrumb
