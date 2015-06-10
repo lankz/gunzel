@@ -1,3 +1,6 @@
+- set_meta_tags :title => "Edit #{<%= class_name %>.model_name.human}",
+                :noindex => true
+
 - content_for(:breadcrumbs) do
   %ol.breadcrumb
     %li= link_to('Home', root_path)

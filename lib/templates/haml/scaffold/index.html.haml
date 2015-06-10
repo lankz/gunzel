@@ -1,3 +1,6 @@
+- set_meta_tags :title => <%= class_name %>.model_name.human.pluralize,
+                :canonical => <%= index_helper %>_url
+
 - content_for(:breadcrumbs) do
   %ol.breadcrumb
     %li= link_to('Home', root_path)
