@@ -20,7 +20,7 @@ module Zangetsu
       protected
 
       def available_views
-        %w(index edit show new _table)
+        super + %w(_table)
       end
 
       def hidden_attribute_names
