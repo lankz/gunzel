@@ -2,12 +2,15 @@
   "name": "Zangetsu",
   "private": true,
   "engines": {
-    "node": "~0.12.4"
+    "node": "0.12.4"
   },
   "dependencies": {
-    "bower": "~1.4.1"
+    "gulp": "*",
+    "gulp-bower": "*",
+    "gulp-replace": "*",
+    "bower": "*"
   },
   "scripts": {
-    "postinstall": "bower install"
+    "postinstall": "gulp"
   }
 }

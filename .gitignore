@@ -21,5 +21,9 @@
 # Ingore environment-based configuration
 /.env
 
-# Ignore installed bower components
-/vendor/assets/components
+# Ignore installed npm and bower stuff
+/node_modules
+/bower_components
+
+# Ignore build directory
+/build

@@ -11,6 +11,6 @@
 # about supported directives.
 #
 #= require jquery_ujs
-#= require bootstrap-sass/assets/javascripts/bootstrap-sprockets
+#= require bootstrap-sprockets
 #= require data-confirm-modal
 #= require_tree .
