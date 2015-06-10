@@ -1,4 +1,4 @@
-require "zangetsu/gem_ext/devise/permit_username_and_login_parameters"
+require 'zangetsu/gem_ext/devise/permit_username_and_login_parameters'
 
 Zangetsu::Application.config.generators do |g|
   g.fixture_replacement :factory_girl, :dir => 'spec/factories'
@@ -16,4 +16,5 @@ Zangetsu::Application.config.generators do |g|
     :view_specs => false
 
   g.scaffold_controller :zangetsu_controller
+  g.template_engine :zangetsu
 end
