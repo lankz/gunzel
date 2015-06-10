@@ -1,7 +1,7 @@
 = simple_form_for(@<%= singular_table_name %>) do |f|
   = f.error_notification
 
-<%- attributes.each do |attribute| -%>
+<%- visible_attributes.each do |attribute| -%>
   = f.<%= attribute.reference? ? :association : :input %>(:<%= attribute.name %>)
 <%- end -%>
 

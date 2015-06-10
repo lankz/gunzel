@@ -17,7 +17,7 @@
     %h1= <%= class_name %>.model_name.human
 
   %dl.dl-horizontal
-  <%- for attribute in attributes -%>
+  <%- visible_attributes.each do |attribute| -%>
     %dt= <%= class_name %>.human_attribute_name(:<%= attribute.name %>)
     %dd= @<%= singular_table_name %>.<%= attribute.name %>
   <%- end -%>

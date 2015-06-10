@@ -1,7 +1,7 @@
 %table.table.table-hover.table-striped
   %thead
     %tr
-  <%- for attribute in attributes -%>
+  <%- visible_attributes.each do |attribute| -%>
       %th= sort_link(@search, :<%= attribute.name %>, <%= class_name%>.human_attribute_name(:<%= attribute.name %>))
   <%- end -%>
       %th
@@ -11,7 +11,7 @@
   %tbody
     - @<%= plural_table_name %>.each do |<%= singular_table_name %>|
       %tr
-  <%- for attribute in attributes -%>
+  <%- visible_attributes.each do |attribute| -%>
         %td= <%= singular_table_name %>.<%= attribute.name %>
   <%- end -%>
         %td
