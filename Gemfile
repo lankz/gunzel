@@ -43,43 +43,49 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'foreman', '~> 0.75'
-gem 'rails_12factor', :group => :production
-gem 'heroku-deflater', '~> 0.5', :group => :production
-gem 'rspec-rails', '~> 3.1', :group => [ :development, :test ]
-gem 'spring-commands-rspec', :group => :development
-gem 'rspec-collection_matchers', '~> 1.0'
-gem 'rspec-its', '~> 1.0'
-gem 'factory_girl_rails', '~> 4.5', :group => :test
-gem 'shoulda-matchers', '~> 2.7', :group => :test
-gem 'capybara', '~> 2.4'
-gem 'haml-rails', '~> 0.5'
-gem 'responders', '~> 2.0'
-gem 'has_scope', '~> 0.5'
-gem 'simple_form', '~> 3.1.0.rc2'
-gem 'kaminari', '~> 0.16'
-gem 'kaminari-bootstrap', '~> 3.0'
-gem 'friendly_id', '~> 5.0'
-gem 'acts-as-taggable-on', '~> 3.4'
-gem 'acts_as_list', '~> 0.4'
-gem 'paranoia', '~> 2.0'
-gem 'paper_trail', '~> 3.0'
-gem 'state_machine', '~> 1.2'
-gem 'meta-tags', '~> 2.0', :require => 'meta_tags'
-gem 'awesome_nested_set', '~> 3.0'
-gem 'sitemap_generator', '~> 5.0'
+source 'https://rails-assets.org' do
+  gem 'rails-assets-modernizr'
+  gem 'rails-assets-respond'
+  gem 'rails-assets-bootstrap-sass', '~> 3.3'
+  gem 'rails-assets-font-awesome'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'heroku-deflater'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+  gem 'rspec-collection_matchers'
+  gem 'rspec-its'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+end
+
+gem 'foreman'
+gem 'haml-rails'
+gem 'responders'
+gem 'has_scope'
+gem 'simple_form'
+gem 'kaminari'
+gem 'kaminari-bootstrap'
+gem 'friendly_id'
+gem 'acts-as-taggable-on'
+gem 'acts_as_list'
+gem 'paranoia'
+gem 'paper_trail'
+gem 'state_machine'
+gem 'meta-tags'
+gem 'awesome_nested_set'
+gem 'sitemap_generator'
 gem 'devise', '~> 3.4'
-gem 'rolify', '~> 4.0'
-gem 'cancancan', '~> 1.9'
-gem 'gravatar_image_tag', '~> 1.2'
+gem 'rolify'
+gem 'cancancan'
+gem 'gravatar_image_tag'
 gem 'data-confirm-modal', :github => 'ifad/data-confirm-modal'
 gem 'dotenv-rails'
-gem 'autoprefixer-rails', '~> 5.1'
-gem 'ransack', '~> 1.6'
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-modernizr', '~> 2.8'
-  gem 'rails-assets-respond', '~> 1.4'
-  gem 'rails-assets-bootstrap-sass', '~> 3.3'
-  gem 'rails-assets-font-awesome', '~> 4.3'
-end
+gem 'autoprefixer-rails'
+gem 'ransack'
