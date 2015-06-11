@@ -21,6 +21,10 @@
 # Ingore environment-based configuration
 /.env
 
+
+# Ignore precompiled assets
+/public/assets
+
 # Ignore installed npm and bower stuff
 /node_modules
 /bower_components

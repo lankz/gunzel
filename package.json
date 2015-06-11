@@ -5,12 +5,9 @@
     "node": "0.12.4"
   },
   "dependencies": {
-    "gulp": "*",
-    "gulp-bower": "*",
-    "gulp-replace": "*",
     "bower": "*"
   },
   "scripts": {
-    "postinstall": "gulp"
+    "postinstall": "bower install"
   }
 }
