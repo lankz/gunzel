@@ -3,7 +3,6 @@
   "description": "Slices through the setup time for your next Rails project",
   "repository": "https://github.com/lankz/zangetsu.git",
   "env": {
-    "BUILDPACK_URL": "https://github.com/ddollar/heroku-buildpack-multi.git",
     "SECRET_KEY_BASE": {
       "generator": "secret"
     }

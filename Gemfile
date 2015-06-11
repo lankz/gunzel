@@ -76,3 +76,10 @@ gem 'data-confirm-modal', :github => 'ifad/data-confirm-modal'
 gem 'dotenv-rails'
 gem 'autoprefixer-rails', '~> 5.1'
 gem 'ransack', '~> 1.6'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-modernizr', '~> 2.8'
+  gem 'rails-assets-respond', '~> 1.4'
+  gem 'rails-assets-bootstrap-sass', '~> 3.3'
+  gem 'rails-assets-font-awesome', '~> 4.3'
+end
