@@ -5,15 +5,16 @@
   = f.<%= attribute.reference? ? :association : :input %>(:<%= attribute.name %>)
 <%- end -%>
 
-  = f.button(:submit, :class => 'btn btn-primary')
+  .form-group
+    = f.button(:submit, :class => 'btn btn-primary')
 
-  = link_to('Cancel', @<%= singular_table_name %>.persisted? ? @<%= singular_table_name %> : <%= index_helper %>_path,
-      :class => 'btn btn-default')
+    = link_to('Cancel', @<%= singular_table_name %>.persisted? ? @<%= singular_table_name %> : <%= index_helper %>_path,
+        :class => 'btn btn-default')
 
-  - if @<%= singular_table_name %>.persisted? && can?(:destroy, @<%= singular_table_name %>)
-    = link_to(@<%= singular_table_name %>,
-        :class => 'btn btn-danger pull-right',
-        :method => :delete,
-        :data => { :confirm => 'Are you sure?' }) do
-      %i.fa.fa-trash-o
-      = "Destroy #{<%= class_name %>.model_name.human}"
+    - if @<%= singular_table_name %>.persisted? && can?(:destroy, @<%= singular_table_name %>)
+      = link_to(@<%= singular_table_name %>,
+          :class => 'btn btn-danger pull-right',
+          :method => :delete,
+          :data => { :confirm => 'Are you sure?' }) do
+        %i.fa.fa-trash-o
+        = "Destroy #{<%= class_name %>.model_name.human}"

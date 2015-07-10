@@ -1,10 +1,9 @@
-.container
-  .page-header
-    %h2 Forgot your password?
+.page-header
+  %h2 Forgot your password?
 
-  = simple_form_for(resource, as: resource_name, url: password_path(resource_name), :wrapper => :horizontal_form, :wrapper_mappings => { :boolean => :horizontal_boolean }, :html => { :class => 'form-horizontal', :role => 'form', :method => :post }) do |f|
-    = f.input :login, :required => true, :autofocus => true
+= simple_form_for(resource, as: resource_name, url: password_path(resource_name), :wrapper => :horizontal_form, :wrapper_mappings => { :boolean => :horizontal_boolean }, :html => { :class => 'form-horizontal', :role => 'form', :method => :post }) do |f|
+  = f.input :login, :required => true, :autofocus => true
 
-    .form-group
-      .col-sm-offset-3.col-sm-9
-        = f.button :submit, "Send me reset password instructions"
+  .form-group
+    .col-sm-offset-3.col-sm-9
+      = f.button :submit, "Send me reset password instructions"

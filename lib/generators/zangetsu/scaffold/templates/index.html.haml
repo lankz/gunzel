@@ -6,15 +6,14 @@
     %li= link_to('Home', root_path)
     %li.active= <%= class_name %>.model_name.human.pluralize
 
-.container
-  .page-header
-    - if can?(:new, @<%= plural_table_name %>.new)
-      = link_to(new_<%= singular_table_name %>_path, :class => 'btn btn-success pull-right') do
-        %i.fa.fa-plus-circle
-        = "New #{<%= class_name %>.model_name.human}"
+.page-header
+  - if can?(:new, @<%= plural_table_name %>.new)
+    = link_to(new_<%= singular_table_name %>_path, :class => 'btn btn-success pull-right') do
+      %i.fa.fa-plus-circle
+      = "New #{<%= class_name %>.model_name.human}"
 
-    %h1= <%= class_name %>.model_name.human.pluralize
+  %h1= <%= class_name %>.model_name.human.pluralize
 
-  = render('table')
+= render('table')
 
-  = paginate(@<%= plural_table_name %>)
+= paginate(@<%= plural_table_name %>)
