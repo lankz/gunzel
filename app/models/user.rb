@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
       where(arel_table[:username].lower.eq(login.downcase).or(
             arel_table[:email].lower.eq(login.downcase))).first
     else
-      where(conditions).first
+      super
     end
   end
 
