@@ -13,6 +13,8 @@
  */
 
 @import "bootstrap-sass";
+
+$fa-font-path: "font-awesome/fonts";
 @import "font-awesome";
 
 body { padding-top: $navbar-height + $grid-gutter-width; }
