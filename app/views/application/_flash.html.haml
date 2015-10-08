@@ -1,0 +1,5 @@
+- flash.reject { |k, v| v.blank? }.each do |type, message|
+  %div.alert.alert-dismissable{ :class => "alert-#{type}" }
+    %button.close{ :data => { :dismiss => 'alert' }, :aria => { :label => 'Close' } }
+      %span{ :aria => { :hidden => true } } &times;
+    = message
