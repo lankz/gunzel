@@ -23,11 +23,17 @@ class ApplicationController < ActionController::Base
 
   def forbidden
     set_meta_tags :title => 'Forbidden'
-    render :forbidden, :status => :forbidden
+
+    render :forbidden,
+           :layout => 'application',
+           :status => :forbidden
   end
 
   def not_found
     set_meta_tags :title => 'Not found'
-    render :not_found, :status => :not_found
+
+    render :not_found,
+           :layout => 'application',
+           :status => :not_found
   end
 end
