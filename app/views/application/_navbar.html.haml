@@ -15,7 +15,7 @@
 
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
-          %li.dropdown
+          %li
             %a.dropdown-toggle{ :href => '#', :data => { :toggle => 'dropdown' }}
               = gravatar_image_tag(current_user.email,
                   :alt => current_user.username,
@@ -36,7 +36,7 @@
                   %i.fa.fa-sign-in
                   Sign out
         - else
-          %li
+          %li{ :class => devise_controller? && 'active' }
             = link_to new_user_session_path do
               %i.fa.fa-sign-out
               Sign in
