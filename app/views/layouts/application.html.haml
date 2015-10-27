@@ -25,13 +25,11 @@
     %header
       = render 'navbar'
 
-      - if content_for?(:breadcrumbs)
-        .container#breadcrumbs
-          = yield :breadcrumbs
+      .container#breadcrumbs
+        = yield :breadcrumbs
 
-      - if flash.present?
-        .container#flash
-          = render 'flash'
+      .container#flash
+        = render 'flash'
 
     %main
       .container#content
