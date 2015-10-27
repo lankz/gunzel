@@ -1,6 +1,6 @@
-require 'zangetsu/gem_ext/devise/permit_username_and_login_parameters'
+require 'gunzel/gem_ext/devise/permit_username_and_login_parameters'
 
-Zangetsu::Application.config.generators do |g|
+Gunzel::Application.config.generators do |g|
   g.fixture_replacement :factory_girl, :dir => 'spec/factories'
 
   # don't generate quite so much cruft when scaffolding
@@ -15,6 +15,6 @@ Zangetsu::Application.config.generators do |g|
     :routing_specs => false,
     :view_specs => false
 
-  g.scaffold_controller :zangetsu_controller
-  g.template_engine :zangetsu
+  g.scaffold_controller :gunzel_controller
+  g.template_engine :gunzel
 end

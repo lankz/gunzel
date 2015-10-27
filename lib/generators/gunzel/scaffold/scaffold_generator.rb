@@ -1,6 +1,6 @@
 require 'generators/haml/scaffold/scaffold_generator'
 
-module Zangetsu
+module Gunzel
   module Generators
     class ScaffoldGenerator < Haml::Generators::ScaffoldGenerator
       def self.source_root

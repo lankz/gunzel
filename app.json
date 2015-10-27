@@ -1,7 +1,7 @@
 {
-  "name": "Zangetsu",
+  "name": "Gunzel",
   "description": "Slices through the setup time for your next Rails project",
-  "repository": "https://github.com/lankz/zangetsu.git",
+  "repository": "https://github.com/lankz/gunzel.git",
   "env": {
     "SECRET_KEY_BASE": {
       "generator": "secret"

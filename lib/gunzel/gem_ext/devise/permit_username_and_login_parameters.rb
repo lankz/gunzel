@@ -1,4 +1,4 @@
-module Zangetsu
+module Gunzel
   module Devise
     module PermitUsernameAndLoginParameters
       # extends ................................................................
@@ -31,5 +31,5 @@ module Zangetsu
 end
 
 Rails.application.config.to_prepare do
-  DeviseController.send :include, Zangetsu::Devise::PermitUsernameAndLoginParameters
+  DeviseController.send :include, Gunzel::Devise::PermitUsernameAndLoginParameters
 end

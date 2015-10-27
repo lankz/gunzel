@@ -1,9 +1,9 @@
-Zangetsu
+Gunzel
 ========
 
 An opinionated Rails starter application that has everything you need to hit the ground running on your next project.
 
-[![Dependency Status](https://gemnasium.com/lankz/zangetsu.svg)](https://gemnasium.com/lankz/zangetsu)
+[![Dependency Status](https://gemnasium.com/lankz/gunzel.svg)](https://gemnasium.com/lankz/gunzel)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 Goodies
@@ -20,7 +20,7 @@ Goodies
 Usage
 -----
 
-Zangetsu is distributed as a customised generated Rails application scaffold (not as a [Rails application template](http://guides.rubyonrails.org/rails_application_templates.html), which would be nice but the idea of stuffing so many customisations into a single script is a little scary).
+Gunzel is distributed as a customised generated Rails application scaffold (not as a [Rails application template](http://guides.rubyonrails.org/rails_application_templates.html), which would be nice but the idea of stuffing so many customisations into a single script is a little scary).
 
 As it's not a gem (yet), you'll need to work with the Git repository to get at the code. If you're starting a new project there are few different options here. The recommended approach is:
 
@@ -28,13 +28,13 @@ As it's not a gem (yet), you'll need to work with the Git repository to get at t
 # create a new project directory and switch to it
 mkdir my_project && cd $_
 
-# initialise a new repository with zangetsu as an upstream remote
+# initialise a new repository with gunzel as an upstream remote
 git init
-git remote add zangetsu git@github.com:lankz/zangetsu.git
-git pull zangetsu/master
+git remote add gunzel git@github.com:lankz/gunzel.git
+git pull gunzel/master
 ```
 
-Zangetsu is not pre-configured for any particular DBMS (please use Postgres :bowtie:) and *should* work with anything Rails does. The database configuration file `config/database.yml` is not checked into version control, so you'll need to copy an example across and customise it before you can proceed.
+Gunzel is not pre-configured for any particular DBMS (please use Postgres :bowtie:) and *should* work with anything Rails does. The database configuration file `config/database.yml` is not checked into version control, so you'll need to copy an example across and customise it before you can proceed.
 
 ```bash
 cp config/database/postgresql.example.yml config/database.yml
@@ -50,7 +50,7 @@ For security reasons it's a good idea to generate a new `secret_key_base`:
 vim config/secrets.yml
 ```
 
-There are loads of other configuration options for Zangetsu and it's dependencies - you'll want to check out the files in `config/initializers`.
+There are loads of other configuration options for Gunzel and it's dependencies - you'll want to check out the files in `config/initializers`.
 
 Finally, here are a few tricks for starting the Rails console and web server (if you deploy on Heroku and don't already use [foreman](https://github.com/ddollar/foreman) you should definitely familiarise yourself with it):
 
