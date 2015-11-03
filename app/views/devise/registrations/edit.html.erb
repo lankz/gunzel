@@ -1,0 +1,54 @@
+<% content_for :breadcrumbs do %>
+  <ol class="breadcrumb">
+    <li><%= link_to 'Home', root_path %></li>
+    <li class="active"><%= "Edit #{resource_class.model_name.human}" %></li>
+  </ol>
+<% end %>
+
+<div class="page-header">
+  <h2><%= "Edit #{resource_class.model_name.human}" %></h2>
+</div>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :wrapper => :horizontal_form, :wrapper_mappings => { :boolean => :horizontal_boolean }, :html => { :class => 'form-horizontal', :role => 'form', :method => :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :email,
+              :required => true,
+              :autofocus => true %>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <p><%= "Currently waiting confirmation for: #{resource.unconfirmed_email}" %></p>
+  <% end %>
+
+  <%= f.input(:password,
+              :autocomplete => 'off',
+              :required => false,
+              :hint => "leave it blank if you don't want to change it") %>
+
+  <%= f.input(:password_confirmation, :required => false) %>
+
+  <%= f.input(:current_password,
+              :required => true,
+              :hint => 'we need your current password to confirm your changes') %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <%= f.button(:submit, 'Update', :class => 'btn-primary') %>
+    </div>
+  </div>
+<% end %>
+
+<hr/>
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Unhappy?</h3>
+  </div>
+
+  <div class="panel-body">
+    <%= link_to('Cancel my account', registration_path(resource_name),
+                :data => { :confirm => 'Are you sure?' },
+                :method => :delete,
+                :class => 'btn btn-danger') %>
+  </div>
+</div>
