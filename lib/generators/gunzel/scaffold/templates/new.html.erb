@@ -1,0 +1,16 @@
+<%% set_meta_tags(:title => "New #{<%= class_name %>.model_name.human}",
+                 :noindex => true) %>
+
+<%% content_for(:breadcrumbs) do %>
+  <ol class="breadcrumb">
+    <li><%%= link_to('Home', root_path) %></li>
+    <li><%%= link_to(<%= class_name %>.model_name.human.pluralize, <%= index_helper %>_path) %></li>
+    <li class="active">New</li>
+  </ol>
+<%% end %>
+
+<div class="page-header">
+  <h1><%%= "New #{<%= class_name %>.model_name.human}" %></h1>
+</div>
+
+<%%= render('form') %>

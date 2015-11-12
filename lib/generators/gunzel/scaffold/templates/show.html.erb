@@ -1,0 +1,28 @@
+<%% set_meta_tags(:title => <%= class_name %>.model_name.human,
+                 :canonical => <%= singular_table_name %>_url(@<%= singular_table_name %>)) %>
+
+<%% content_for(:breadcrumbs) do %>
+  <ol class="breadcrumb">
+    <li><%%= link_to('Home', root_path) %></li>
+    <li><%%= link_to(<%= class_name %>.model_name.human.pluralize, <%= index_helper %>_path) %></li>
+    <li class="active"><%%= <%= class_name %>.model_name.human %></li>
+  </ol>
+<%% end %>
+
+<div class="page-header">
+  <%% if can?(:edit, @<%= singular_table_name %>) %>
+    <%%= link_to(edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), :class => 'btn btn-default pull-right') do %>
+      <i class="fa fa-edit"></i>
+      <%%= "Edit #{<%= class_name %>.model_name.human}" %>
+    <%% end %>
+  <%% end %>
+
+  <h1><%%= <%= class_name %>.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+<%- visible_attributes.each do |attribute| -%>
+  <dt><%%= <%= class_name %>.human_attribute_name(:<%= attribute.name %>) %></dt>
+  <dd><%%= @<%= singular_table_name %>.<%= attribute.name %> %></dd>
+<%- end -%>
+</dl>

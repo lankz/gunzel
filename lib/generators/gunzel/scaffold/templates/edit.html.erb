@@ -1,0 +1,17 @@
+<%% set_meta_tags(:title => "Edit #{<%= class_name %>.model_name.human}",
+                 :noindex => true) %>
+
+<%% content_for(:breadcrumbs) do %>
+  <ol class="breadcrumb">
+    <li><%%= link_to('Home', root_path) %></li>
+    <li><%%= link_to(<%= class_name %>.model_name.human.pluralize, <%= index_helper %>_path) %></li>
+    <li><%%= link_to(<%= class_name %>.model_name.human, @<%= singular_table_name %>) %></li>
+    <li class="active">Edit</li>
+  </ol>
+<%% end %>
+
+<div class="page-header">
+  <h1><%%= "Edit #{<%= class_name %>.model_name.human}" %></h1>
+</div>
+
+<%%= render('form') %>

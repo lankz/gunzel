@@ -1,8 +1,8 @@
-require 'generators/haml/scaffold/scaffold_generator'
+require 'rails/generators/erb/scaffold/scaffold_generator'
 
 module Gunzel
   module Generators
-    class ScaffoldGenerator < Haml::Generators::ScaffoldGenerator
+    class ScaffoldGenerator < Erb::Generators::ScaffoldGenerator
       def self.source_root
         File.expand_path("../templates", __FILE__)
       end
