@@ -47,6 +47,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-respond'
   gem 'rails-assets-bootstrap-sass', '~> 3.3'
   gem 'rails-assets-font-awesome'
+  gem 'rails-assets-underscore'
 end
 
 group :production do
