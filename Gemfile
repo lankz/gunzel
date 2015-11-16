@@ -44,7 +44,6 @@ group :development, :test do
 end
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-modernizr'
   gem 'rails-assets-respond'
   gem 'rails-assets-bootstrap-sass', '~> 3.3'
   gem 'rails-assets-font-awesome'
@@ -88,3 +87,4 @@ gem 'data-confirm-modal', :github => 'ifad/data-confirm-modal'
 gem 'dotenv-rails'
 gem 'autoprefixer-rails'
 gem 'ransack'
+gem 'modernizr-rails'
