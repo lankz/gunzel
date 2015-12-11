@@ -162,7 +162,13 @@ GEM
       rails-assets-jquery (>= 1.9.0)
     rails-assets-font-awesome (4.4.0)
     rails-assets-jquery (2.1.4)
+    rails-assets-microplugin (0.0.3)
     rails-assets-respond (1.4.2)
+    rails-assets-selectize (0.12.1)
+      rails-assets-jquery (>= 1.7.0)
+      rails-assets-microplugin (~> 0.0.0)
+      rails-assets-sifter (~> 0.4.0)
+    rails-assets-sifter (0.4.5)
     rails-assets-underscore (1.8.3)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -296,6 +302,7 @@ DEPENDENCIES
   rails-assets-bootstrap-sass (~> 3.3)!
   rails-assets-font-awesome!
   rails-assets-respond!
+  rails-assets-selectize!
   rails-assets-underscore!
   rails_12factor
   ransack

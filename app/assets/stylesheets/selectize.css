@@ -1,0 +1,8 @@
+/*
+ *= require selectize/selectize.bootstrap3
+ */
+
+.selectize-dropdown .active {
+ background-color: #428bca;
+ color: #ffffff;
+}

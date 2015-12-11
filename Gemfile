@@ -48,6 +48,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap-sass', '~> 3.3'
   gem 'rails-assets-font-awesome'
   gem 'rails-assets-underscore'
+  gem 'rails-assets-selectize'
 end
 
 group :production do
