@@ -11,7 +11,18 @@
 <%% end %>
 
 <div class="page-header">
+  <%% if can?(:destroy, @<%= singular_table_name %>) %>
+    <%%= link_to(@<%= singular_table_name %>, :class => 'btn btn-danger pull-right',
+              <%= ' ' * singular_table_name.length %>     :method => :delete,
+              <%= ' ' * singular_table_name.length %>     :data => { :confirm => 'Are you sure?' }
+    ) do %>
+      <i class="fa fa-trash-o"></i>
+      <%%= "Destroy #{<%= class_name %>.model_name.human}" %>
+    <%% end %>
+  <%% end %>
+
   <h1><%%= "Edit #{<%= class_name %>.model_name.human}" %></h1>
 </div>
 
+<%%= render('tabs') %>
 <%%= render('form') %>

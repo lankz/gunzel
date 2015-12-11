@@ -20,7 +20,7 @@ module Gunzel
       protected
 
       def available_views
-        super + %w(_table)
+        super + %w(_table _tabs)
       end
 
       def hidden_attribute_names

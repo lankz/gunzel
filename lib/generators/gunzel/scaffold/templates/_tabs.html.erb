@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs" style="margin-bottom: 40px">
+  <li class="<%%= 'active' if action_name == 'show' %>"><%%= link_to('View', @<%= singular_table_name %>) %></li>
+  <li class="<%%= 'active' if action_name == 'edit' %>"><%%= link_to('Edit', edit_<%= singular_table_name %>_path(@<%= singular_table_name %>)) %></li>
+</ul>
