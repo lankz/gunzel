@@ -17,6 +17,14 @@ module Gunzel
                   .values
       end
 
+      def search_attributes
+        attributes.select { |a| a.type == :string || a.type == :text }
+      end
+
+      def search_field
+        "#{search_attributes.map(&:name).join('_or_')}_cont"
+      end
+
       protected
 
       def available_views
