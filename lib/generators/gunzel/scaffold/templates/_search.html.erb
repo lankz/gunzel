@@ -1,0 +1,17 @@
+<%%= search_form_for(@search, :class => 'form-inline') do |f| %>
+  <div class="input-group input-group-sm">
+   <%%= f.input_field :<%=
+    visible_attributes.select { |a| a.type == :string || a.type == :text } \
+                      .map(&:name) \
+                      .join('_or_') %>_cont,
+                      :class => 'form-control',
+                      :required => false,
+                      :placeholder => 'Search' %>
+
+    <div class="input-group-btn">
+     <%%= button_tag :class => 'btn btn-default' do %>
+       <i class="fa fa-search"></i>
+     <%% end %>
+    </div>
+  </div>
+<%% end %>

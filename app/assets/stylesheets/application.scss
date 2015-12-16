@@ -27,3 +27,13 @@ body { padding-top: $navbar-height + $grid-gutter-width; }
 
   margin: -7px ($grid-gutter-width * 0.25) -7px 0;
 }
+
+.page-header-actions {
+  @extend .pull-right;
+
+  padding: 4px 0;
+
+  &>* {
+    display: inline-block;
+  }
+}

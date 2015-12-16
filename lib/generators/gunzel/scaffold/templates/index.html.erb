@@ -9,12 +9,16 @@
 <%% end %>
 
 <div class="page-header">
-  <%% if can?(:new, @<%= plural_table_name %>.new) %>
-    <%%= link_to(new_<%= singular_table_name %>_path, :class => 'btn btn-success pull-right') do %>
-      <i class="fa fa-plus-circle"></i>
-      <%%= "New #{<%= class_name %>.model_name.human}" %>
+  <div class="page-header-actions">
+    <%%= render('search') %>
+
+    <%% if can?(:new, @<%= plural_table_name %>.new) %>
+      <%%= link_to(new_<%= singular_table_name %>_path, :class => 'btn btn-sm btn-success') do %>
+        <i class="fa fa-plus-circle"></i>
+        <%%= "New #{<%= class_name %>.model_name.human}" %>
+      <%% end %>
     <%% end %>
-  <%% end %>
+  </div>
 
   <h1><%%= <%= class_name %>.model_name.human.pluralize %></h1>
 </div>
