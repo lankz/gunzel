@@ -37,3 +37,11 @@ body { padding-top: $navbar-height + $grid-gutter-width; }
     display: inline-block;
   }
 }
+
+.page-header-tabbed {
+  border-bottom: none;
+
+  .nav-tabs {
+    margin-top: 20px;
+  }
+}
