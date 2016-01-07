@@ -130,7 +130,6 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.3)
-    modernizr-rails (2.7.1)
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
@@ -162,6 +161,7 @@ GEM
     rails-assets-bootstrap-sass (3.3.6)
       rails-assets-jquery (>= 1.9.0)
     rails-assets-font-awesome (4.5.0)
+    rails-assets-html5shiv (3.7.3)
     rails-assets-jquery (2.1.4)
     rails-assets-microplugin (0.0.3)
     rails-assets-respond (1.4.2)
@@ -296,7 +296,6 @@ DEPENDENCIES
   kaminari
   kaminari-bootstrap
   meta-tags
-  modernizr-rails
   paper_trail
   paranoia
   pg
@@ -304,6 +303,7 @@ DEPENDENCIES
   rails (= 4.2.5)
   rails-assets-bootstrap-sass (~> 3.3)!
   rails-assets-font-awesome!
+  rails-assets-html5shiv!
   rails-assets-respond!
   rails-assets-selectize!
   rails-assets-underscore!

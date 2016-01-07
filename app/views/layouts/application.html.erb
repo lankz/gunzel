@@ -12,8 +12,10 @@
 
     <%= stylesheet_link_tag('application', :media => 'all') %>
 
-    <%= javascript_include_tag('modernizr') %>
-    <%= javascript_include_tag('respond') %>
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag('html5shiv') %>
+      <%= javascript_include_tag('respond') %>
+    <![endif]-->
   </head>
   <body>
     <header>
