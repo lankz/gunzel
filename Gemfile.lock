@@ -5,6 +5,13 @@ GIT
     data-confirm-modal (1.1.0)
       railties (>= 3.0)
 
+GIT
+  remote: git://github.com/rails/turbolinks.git
+  revision: dd31f4b2996f2300631f89339ada82c65b95f4c2
+  specs:
+    turbolinks (3.0.0)
+      coffee-rails
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -322,6 +329,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   state_machine
+  turbolinks!
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 
