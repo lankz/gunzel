@@ -43,24 +43,21 @@ class <%= controller_class_name %>Controller < ApplicationController
   end
 
   def create
-    authorize!(:create, @<%= singular_table_name %> ||= <%= orm_class.build(class_name, "#{singular_table_name}_params") %>)
-
-    @<%= singular_table_name %>.save
-    respond_with(@<%= singular_table_name %>)
+    respond_with(authorize!(:create, @<%= singular_table_name %> ||=
+      <%= orm_class.build(class_name, "#{singular_table_name}_params") %>) \
+      <%= ' ' * class_name.length %>.tap(&:save))
   end
 
   def update
-    authorize!(:update, @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
-
-    @<%= orm_instance.update("#{singular_table_name}_params") %>
-    respond_with(@<%= singular_table_name %>)
+    respond_with(authorize!(:update, @<%= singular_table_name %> ||=
+      <%= orm_class.find(class_name, "params[:id]") %>) \
+      <%= ' ' * class_name.length %>.tap { |<%= singular_table_name.first %>| <%= singular_table_name.first %>.update(<%= "#{singular_table_name}_params" %>) })
   end
 
   def destroy
-    authorize!(:destroy, @<%= singular_table_name %> ||= <%= orm_class.find(class_name, "params[:id]") %>)
-
-    @<%= orm_instance.destroy %>
-    respond_with(@<%= singular_table_name %>)
+    respond_with(authorize!(:destroy, @<%= singular_table_name %> ||=
+      <%= orm_class.find(class_name, "params[:id]") %>) \
+      <%= ' ' * class_name.length %>.tap(&:destroy))
   end
 
   # protected instance methods .................................................
