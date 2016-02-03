@@ -10,7 +10,8 @@
     <%= display_meta_tags(:site => 'Gunzel', :reverse => true, :separator => '-') %>
     <%= csrf_meta_tag %>
 
-    <%= stylesheet_link_tag('application', :media => 'all') %>
+    <%= stylesheet_link_tag('application', :media => 'all', 'data-turbolinks-track' => true) %>
+    <%= javascript_include_tag('application', 'data-turbolinks-track' => true) %>
 
     <!--[if lt IE 9]>
       <%= javascript_include_tag('html5shiv') %>
@@ -39,7 +40,5 @@
     <footer>
       <!-- something here -->
     </footer>
-
-    <%= javascript_include_tag('application') %>
   </body>
 </html>

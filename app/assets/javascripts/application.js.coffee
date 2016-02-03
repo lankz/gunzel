@@ -13,6 +13,7 @@
 #= require underscore
 #= require jquery
 #= require jquery_ujs
+#= require turbolinks
 #= require bootstrap-sass
 #= require data-confirm-modal
 #= require_tree .
