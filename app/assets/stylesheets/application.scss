@@ -15,7 +15,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$fa-font-path: "font-awesome/fonts";
+@import "font-awesome-sprockets";
 @import "font-awesome";
 
 body { padding-top: $navbar-height + $grid-gutter-width; }

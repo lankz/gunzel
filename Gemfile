@@ -46,7 +46,6 @@ end
 source 'https://rails-assets.org' do
   gem 'rails-assets-html5shiv'
   gem 'rails-assets-respond'
-  gem 'rails-assets-font-awesome'
   gem 'rails-assets-underscore'
   gem 'rails-assets-selectize'
 end
@@ -90,3 +89,4 @@ gem 'dotenv-rails'
 gem 'autoprefixer-rails'
 gem 'ransack'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
