@@ -12,7 +12,8 @@
  *= require_tree .
  */
 
-@import "bootstrap-sass";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 $fa-font-path: "font-awesome/fonts";
 @import "font-awesome";
